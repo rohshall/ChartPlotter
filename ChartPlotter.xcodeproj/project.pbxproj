@@ -17,12 +17,14 @@
 		50A675F1172914A100FE78FE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A675F0172914A100FE78FE /* Default@2x.png */; };
 		50A675F3172914A100FE78FE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A675F2172914A100FE78FE /* Default-568h@2x.png */; };
 		50A675F6172914A100FE78FE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A675F4172914A100FE78FE /* MainStoryboard.storyboard */; };
-		50A675F9172914A100FE78FE /* PLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A675F8172914A100FE78FE /* PLViewController.m */; };
 		50A67601172914A100FE78FE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A67600172914A100FE78FE /* SenTestingKit.framework */; };
 		50A67602172914A100FE78FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DC172914A100FE78FE /* UIKit.framework */; };
 		50A67603172914A100FE78FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DE172914A100FE78FE /* Foundation.framework */; };
 		50A6760B172914A100FE78FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50A67609172914A100FE78FE /* InfoPlist.strings */; };
 		50A6760E172914A200FE78FE /* ChartPlotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6760D172914A200FE78FE /* ChartPlotterTests.m */; };
+		50A6761B17291B7700FE78FE /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6761917291B7700FE78FE /* LineChartViewController.m */; };
+		50A6761C17291B7700FE78FE /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6761A17291B7700FE78FE /* PCLineChartView.m */; };
+		50A67621172939C200FE78FE /* sample_linechart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 50A67620172939C200FE78FE /* sample_linechart_data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +52,17 @@
 		50A675F0172914A100FE78FE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		50A675F2172914A100FE78FE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		50A675F5172914A100FE78FE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		50A675F7172914A100FE78FE /* PLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLViewController.h; sourceTree = "<group>"; };
-		50A675F8172914A100FE78FE /* PLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLViewController.m; sourceTree = "<group>"; };
 		50A675FF172914A100FE78FE /* ChartPlotterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartPlotterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A67600172914A100FE78FE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		50A67608172914A100FE78FE /* ChartPlotterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartPlotterTests-Info.plist"; sourceTree = "<group>"; };
 		50A6760A172914A100FE78FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50A6760C172914A200FE78FE /* ChartPlotterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartPlotterTests.h; sourceTree = "<group>"; };
 		50A6760D172914A200FE78FE /* ChartPlotterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartPlotterTests.m; sourceTree = "<group>"; };
+		50A6761717291B7700FE78FE /* LineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChartViewController.h; sourceTree = "<group>"; };
+		50A6761817291B7700FE78FE /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
+		50A6761917291B7700FE78FE /* LineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartViewController.m; sourceTree = "<group>"; };
+		50A6761A17291B7700FE78FE /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
+		50A67620172939C200FE78FE /* sample_linechart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_linechart_data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +122,14 @@
 		50A675E2172914A100FE78FE /* ChartPlotter */ = {
 			isa = PBXGroup;
 			children = (
+				50A67620172939C200FE78FE /* sample_linechart_data.json */,
+				50A6761717291B7700FE78FE /* LineChartViewController.h */,
+				50A6761817291B7700FE78FE /* PCLineChartView.h */,
+				50A6761917291B7700FE78FE /* LineChartViewController.m */,
+				50A6761A17291B7700FE78FE /* PCLineChartView.m */,
 				50A675EB172914A100FE78FE /* PLAppDelegate.h */,
 				50A675EC172914A100FE78FE /* PLAppDelegate.m */,
 				50A675F4172914A100FE78FE /* MainStoryboard.storyboard */,
-				50A675F7172914A100FE78FE /* PLViewController.h */,
-				50A675F8172914A100FE78FE /* PLViewController.m */,
 				50A675E3172914A100FE78FE /* Supporting Files */,
 			);
 			path = ChartPlotter;
@@ -237,6 +245,7 @@
 				50A675F1172914A100FE78FE /* Default@2x.png in Resources */,
 				50A675F3172914A100FE78FE /* Default-568h@2x.png in Resources */,
 				50A675F6172914A100FE78FE /* MainStoryboard.storyboard in Resources */,
+				50A67621172939C200FE78FE /* sample_linechart_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +282,8 @@
 			files = (
 				50A675E9172914A100FE78FE /* main.m in Sources */,
 				50A675ED172914A100FE78FE /* PLAppDelegate.m in Sources */,
-				50A675F9172914A100FE78FE /* PLViewController.m in Sources */,
+				50A6761B17291B7700FE78FE /* LineChartViewController.m in Sources */,
+				50A6761C17291B7700FE78FE /* PCLineChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
