@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50A675DD172914A100FE78FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DC172914A100FE78FE /* UIKit.framework */; };
+		50A675DF172914A100FE78FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DE172914A100FE78FE /* Foundation.framework */; };
+		50A675E1172914A100FE78FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675E0172914A100FE78FE /* CoreGraphics.framework */; };
+		50A675E7172914A100FE78FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50A675E5172914A100FE78FE /* InfoPlist.strings */; };
+		50A675E9172914A100FE78FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A675E8172914A100FE78FE /* main.m */; };
+		50A675ED172914A100FE78FE /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A675EC172914A100FE78FE /* PLAppDelegate.m */; };
+		50A675EF172914A100FE78FE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A675EE172914A100FE78FE /* Default.png */; };
+		50A675F1172914A100FE78FE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A675F0172914A100FE78FE /* Default@2x.png */; };
+		50A675F3172914A100FE78FE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50A675F2172914A100FE78FE /* Default-568h@2x.png */; };
+		50A675F6172914A100FE78FE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A675F4172914A100FE78FE /* MainStoryboard.storyboard */; };
+		50A675F9172914A100FE78FE /* PLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A675F8172914A100FE78FE /* PLViewController.m */; };
+		50A67601172914A100FE78FE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A67600172914A100FE78FE /* SenTestingKit.framework */; };
+		50A67602172914A100FE78FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DC172914A100FE78FE /* UIKit.framework */; };
+		50A67603172914A100FE78FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DE172914A100FE78FE /* Foundation.framework */; };
+		50A6760B172914A100FE78FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50A67609172914A100FE78FE /* InfoPlist.strings */; };
+		50A6760E172914A200FE78FE /* ChartPlotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6760D172914A200FE78FE /* ChartPlotterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50A67604172914A100FE78FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50A675D1172914A100FE78FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50A675D8172914A100FE78FE;
+			remoteInfo = ChartPlotter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50A675D9172914A100FE78FE /* ChartPlotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartPlotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A675DC172914A100FE78FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50A675DE172914A100FE78FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50A675E0172914A100FE78FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50A675E4172914A100FE78FE /* ChartPlotter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartPlotter-Info.plist"; sourceTree = "<group>"; };
+		50A675E6172914A100FE78FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50A675E8172914A100FE78FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50A675EA172914A100FE78FE /* ChartPlotter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChartPlotter-Prefix.pch"; sourceTree = "<group>"; };
+		50A675EB172914A100FE78FE /* PLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAppDelegate.h; sourceTree = "<group>"; };
+		50A675EC172914A100FE78FE /* PLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAppDelegate.m; sourceTree = "<group>"; };
+		50A675EE172914A100FE78FE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		50A675F0172914A100FE78FE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		50A675F2172914A100FE78FE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		50A675F5172914A100FE78FE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		50A675F7172914A100FE78FE /* PLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLViewController.h; sourceTree = "<group>"; };
+		50A675F8172914A100FE78FE /* PLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLViewController.m; sourceTree = "<group>"; };
+		50A675FF172914A100FE78FE /* ChartPlotterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartPlotterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A67600172914A100FE78FE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		50A67608172914A100FE78FE /* ChartPlotterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartPlotterTests-Info.plist"; sourceTree = "<group>"; };
+		50A6760A172914A100FE78FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50A6760C172914A200FE78FE /* ChartPlotterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartPlotterTests.h; sourceTree = "<group>"; };
+		50A6760D172914A200FE78FE /* ChartPlotterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartPlotterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50A675D6172914A100FE78FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A675DD172914A100FE78FE /* UIKit.framework in Frameworks */,
+				50A675DF172914A100FE78FE /* Foundation.framework in Frameworks */,
+				50A675E1172914A100FE78FE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50A675FB172914A100FE78FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A67601172914A100FE78FE /* SenTestingKit.framework in Frameworks */,
+				50A67602172914A100FE78FE /* UIKit.framework in Frameworks */,
+				50A67603172914A100FE78FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50A675D0172914A100FE78FE = {
+			isa = PBXGroup;
+			children = (
+				50A675E2172914A100FE78FE /* ChartPlotter */,
+				50A67606172914A100FE78FE /* ChartPlotterTests */,
+				50A675DB172914A100FE78FE /* Frameworks */,
+				50A675DA172914A100FE78FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50A675DA172914A100FE78FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50A675D9172914A100FE78FE /* ChartPlotter.app */,
+				50A675FF172914A100FE78FE /* ChartPlotterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50A675DB172914A100FE78FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50A675DC172914A100FE78FE /* UIKit.framework */,
+				50A675DE172914A100FE78FE /* Foundation.framework */,
+				50A675E0172914A100FE78FE /* CoreGraphics.framework */,
+				50A67600172914A100FE78FE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50A675E2172914A100FE78FE /* ChartPlotter */ = {
+			isa = PBXGroup;
+			children = (
+				50A675EB172914A100FE78FE /* PLAppDelegate.h */,
+				50A675EC172914A100FE78FE /* PLAppDelegate.m */,
+				50A675F4172914A100FE78FE /* MainStoryboard.storyboard */,
+				50A675F7172914A100FE78FE /* PLViewController.h */,
+				50A675F8172914A100FE78FE /* PLViewController.m */,
+				50A675E3172914A100FE78FE /* Supporting Files */,
+			);
+			path = ChartPlotter;
+			sourceTree = "<group>";
+		};
+		50A675E3172914A100FE78FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50A675E4172914A100FE78FE /* ChartPlotter-Info.plist */,
+				50A675E5172914A100FE78FE /* InfoPlist.strings */,
+				50A675E8172914A100FE78FE /* main.m */,
+				50A675EA172914A100FE78FE /* ChartPlotter-Prefix.pch */,
+				50A675EE172914A100FE78FE /* Default.png */,
+				50A675F0172914A100FE78FE /* Default@2x.png */,
+				50A675F2172914A100FE78FE /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50A67606172914A100FE78FE /* ChartPlotterTests */ = {
+			isa = PBXGroup;
+			children = (
+				50A6760C172914A200FE78FE /* ChartPlotterTests.h */,
+				50A6760D172914A200FE78FE /* ChartPlotterTests.m */,
+				50A67607172914A100FE78FE /* Supporting Files */,
+			);
+			path = ChartPlotterTests;
+			sourceTree = "<group>";
+		};
+		50A67607172914A100FE78FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50A67608172914A100FE78FE /* ChartPlotterTests-Info.plist */,
+				50A67609172914A100FE78FE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50A675D8172914A100FE78FE /* ChartPlotter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50A67611172914A200FE78FE /* Build configuration list for PBXNativeTarget "ChartPlotter" */;
+			buildPhases = (
+				50A675D5172914A100FE78FE /* Sources */,
+				50A675D6172914A100FE78FE /* Frameworks */,
+				50A675D7172914A100FE78FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChartPlotter;
+			productName = ChartPlotter;
+			productReference = 50A675D9172914A100FE78FE /* ChartPlotter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50A675FE172914A100FE78FE /* ChartPlotterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50A67614172914A200FE78FE /* Build configuration list for PBXNativeTarget "ChartPlotterTests" */;
+			buildPhases = (
+				50A675FA172914A100FE78FE /* Sources */,
+				50A675FB172914A100FE78FE /* Frameworks */,
+				50A675FC172914A100FE78FE /* Resources */,
+				50A675FD172914A100FE78FE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50A67605172914A100FE78FE /* PBXTargetDependency */,
+			);
+			name = ChartPlotterTests;
+			productName = ChartPlotterTests;
+			productReference = 50A675FF172914A100FE78FE /* ChartPlotterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50A675D1172914A100FE78FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Salil Wadnerkar";
+			};
+			buildConfigurationList = 50A675D4172914A100FE78FE /* Build configuration list for PBXProject "ChartPlotter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50A675D0172914A100FE78FE;
+			productRefGroup = 50A675DA172914A100FE78FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50A675D8172914A100FE78FE /* ChartPlotter */,
+				50A675FE172914A100FE78FE /* ChartPlotterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50A675D7172914A100FE78FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A675E7172914A100FE78FE /* InfoPlist.strings in Resources */,
+				50A675EF172914A100FE78FE /* Default.png in Resources */,
+				50A675F1172914A100FE78FE /* Default@2x.png in Resources */,
+				50A675F3172914A100FE78FE /* Default-568h@2x.png in Resources */,
+				50A675F6172914A100FE78FE /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50A675FC172914A100FE78FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A6760B172914A100FE78FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50A675FD172914A100FE78FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50A675D5172914A100FE78FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A675E9172914A100FE78FE /* main.m in Sources */,
+				50A675ED172914A100FE78FE /* PLAppDelegate.m in Sources */,
+				50A675F9172914A100FE78FE /* PLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50A675FA172914A100FE78FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50A6760E172914A200FE78FE /* ChartPlotterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50A67605172914A100FE78FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50A675D8172914A100FE78FE /* ChartPlotter */;
+			targetProxy = 50A67604172914A100FE78FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50A675E5172914A100FE78FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50A675E6172914A100FE78FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50A675F4172914A100FE78FE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50A675F5172914A100FE78FE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		50A67609172914A100FE78FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50A6760A172914A100FE78FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50A6760F172914A200FE78FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50A67610172914A200FE78FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50A67612172914A200FE78FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartPlotter/ChartPlotter-Prefix.pch";
+				INFOPLIST_FILE = "ChartPlotter/ChartPlotter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50A67613172914A200FE78FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartPlotter/ChartPlotter-Prefix.pch";
+				INFOPLIST_FILE = "ChartPlotter/ChartPlotter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		50A67615172914A200FE78FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ChartPlotter.app/ChartPlotter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartPlotter/ChartPlotter-Prefix.pch";
+				INFOPLIST_FILE = "ChartPlotterTests/ChartPlotterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		50A67616172914A200FE78FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ChartPlotter.app/ChartPlotter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartPlotter/ChartPlotter-Prefix.pch";
+				INFOPLIST_FILE = "ChartPlotterTests/ChartPlotterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50A675D4172914A100FE78FE /* Build configuration list for PBXProject "ChartPlotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50A6760F172914A200FE78FE /* Debug */,
+				50A67610172914A200FE78FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50A67611172914A200FE78FE /* Build configuration list for PBXNativeTarget "ChartPlotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50A67612172914A200FE78FE /* Debug */,
+				50A67613172914A200FE78FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		50A67614172914A200FE78FE /* Build configuration list for PBXNativeTarget "ChartPlotterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50A67615172914A200FE78FE /* Debug */,
+				50A67616172914A200FE78FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50A675D1172914A100FE78FE /* Project object */;
+}
