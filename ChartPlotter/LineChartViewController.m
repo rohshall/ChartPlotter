@@ -87,9 +87,7 @@
 		}
         [javaComponent setPoints:javaPoints];
         [javascriptComponent setPoints:javascriptPoints];
-        NSMutableArray *components = [NSMutableArray array];
-        [components addObject:javaComponent];
-        [components addObject:javascriptComponent];
+        NSMutableArray *components = [NSMutableArray arrayWithObjects:javaComponent, javascriptComponent, nil];
 		[_lineChartView setComponents:components];
 		[_lineChartView setXLabels:xLabels];
 	}

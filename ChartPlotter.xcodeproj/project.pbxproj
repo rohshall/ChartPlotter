@@ -24,6 +24,7 @@
 		50A6760E172914A200FE78FE /* ChartPlotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6760D172914A200FE78FE /* ChartPlotterTests.m */; };
 		50A6761B17291B7700FE78FE /* LineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6761917291B7700FE78FE /* LineChartViewController.m */; };
 		50A6761C17291B7700FE78FE /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A6761A17291B7700FE78FE /* PCLineChartView.m */; };
+		50BB2D95172A5F2D00155CFA /* PLConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BB2D94172A5F2D00155CFA /* PLConfigViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		50A6761817291B7700FE78FE /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
 		50A6761917291B7700FE78FE /* LineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChartViewController.m; sourceTree = "<group>"; };
 		50A6761A17291B7700FE78FE /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
+		50BB2D93172A5F2D00155CFA /* PLConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLConfigViewController.h; sourceTree = "<group>"; };
+		50BB2D94172A5F2D00155CFA /* PLConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLConfigViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				50A675EB172914A100FE78FE /* PLAppDelegate.h */,
 				50A675EC172914A100FE78FE /* PLAppDelegate.m */,
 				50A675F4172914A100FE78FE /* MainStoryboard.storyboard */,
+				50BB2D93172A5F2D00155CFA /* PLConfigViewController.h */,
+				50BB2D94172A5F2D00155CFA /* PLConfigViewController.m */,
 				50A675E3172914A100FE78FE /* Supporting Files */,
 			);
 			path = ChartPlotter;
@@ -280,6 +285,7 @@
 				50A675ED172914A100FE78FE /* PLAppDelegate.m in Sources */,
 				50A6761B17291B7700FE78FE /* LineChartViewController.m in Sources */,
 				50A6761C17291B7700FE78FE /* PCLineChartView.m in Sources */,
+				50BB2D95172A5F2D00155CFA /* PLConfigViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
