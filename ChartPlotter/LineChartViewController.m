@@ -46,60 +46,52 @@
 
 - (id)init
 {
-    NSLog(@"In Init.........");
 	self = [super init];
 	if (self)
 	{
 		[self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
-		[self setTitle:@"Line Chart"];
+		[self setTitle:@"Java vs Javascript"];
 		
 		_lineChartView = [[PCLineChartView alloc] initWithFrame:CGRectMake(10,10,[self.view bounds].size.width-20,[self.view bounds].size.height-20)];
 		[_lineChartView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-		_lineChartView.minValue = -40;
-		_lineChartView.maxValue = 100;
+		_lineChartView.minValue = 100;
+		_lineChartView.maxValue = 12000;
 		[self.view addSubview:_lineChartView];
 		
-		NSString *sampleFile = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"sample_linechart_data.json"];
+		NSString *sampleFile = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"so_data.json"];
         NSData *myData = [NSData dataWithContentsOfFile:sampleFile];
         NSError* error = nil;
         NSDictionary *sampleInfo = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:myData
                                                                                    options:kNilOptions
                                                                                      error:&error];
         
-        NSMutableArray *components = [NSMutableArray array];
-		for (int i=0; i<[[sampleInfo objectForKey:@"data"] count]; i++)
+        PCLineChartViewComponent *javaComponent = [[PCLineChartViewComponent alloc] init];
+        [javaComponent setTitle:@"Java"];
+        [javaComponent setColour:PCColorOrange];
+        [javaComponent setShouldLabelValues:NO];
+
+        PCLineChartViewComponent *javascriptComponent = [[PCLineChartViewComponent alloc] init];
+        [javascriptComponent setTitle:@"Javascript"];
+        [javascriptComponent setColour:PCColorBlue];
+        [javascriptComponent setShouldLabelValues:NO];
+
+        NSMutableArray *xLabels = [NSMutableArray array];
+        NSMutableArray *javaPoints = [NSMutableArray array];
+        NSMutableArray *javascriptPoints = [NSMutableArray array];
+        
+		for (NSDictionary *point in [sampleInfo objectForKey:@"data"])
 		{
-			NSDictionary *point = [[sampleInfo objectForKey:@"data"] objectAtIndex:i];
-			PCLineChartViewComponent *component = [[PCLineChartViewComponent alloc] init];
-			[component setTitle:[point objectForKey:@"title"]];
-			[component setPoints:[point objectForKey:@"data"]];
-			[component setShouldLabelValues:NO];
-			
-			if (i==0)
-			{
-				[component setColour:PCColorYellow];
-			}
-			else if (i==1)
-			{
-				[component setColour:PCColorGreen];
-			}
-			else if (i==2)
-			{
-				[component setColour:PCColorOrange];
-			}
-			else if (i==3)
-			{
-				[component setColour:PCColorRed];
-			}
-			else if (i==4)
-			{
-				[component setColour:PCColorBlue];
-			}
-			
-			[components addObject:component];
+            [javaPoints addObject:[point objectForKey:@"java"]];
+            [javascriptPoints addObject:[point objectForKey:@"javascript"]];
+			[xLabels addObject:[point objectForKey:@"time"]];
 		}
+        [javaComponent setPoints:javaPoints];
+        [javascriptComponent setPoints:javascriptPoints];
+        NSMutableArray *components = [NSMutableArray array];
+        [components addObject:javaComponent];
+        [components addObject:javascriptComponent];
 		[_lineChartView setComponents:components];
-		[_lineChartView setXLabels:[sampleInfo objectForKey:@"x_labels"]];
+		[_lineChartView setXLabels:xLabels];
 	}
 	return self;
 }

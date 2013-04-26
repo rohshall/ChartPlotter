@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "fields": [
+      "java",
+      "javascript"
+    ]
+  },
+  "data": [
+    {
+      "java": 10621,
+      "javascript": 9459,
+      "time": 1320105600000
+    },
+    {
+      "java": 9253,
+      "javascript": 8583,
+      "time": 1317427200000
+    },
+    {
+      "java": 9006,
+      "javascript": 8797,
+      "time": 1314835200000
+    },
+    {
+      "java": 9303,
+      "javascript": 9482,
+      "time": 1312156800000
+    },
+    {
+      "java": 8747,
+      "javascript": 8568,
+      "time": 1309478400000
+    },
+    {
+      "java": 8519,
+      "javascript": 8079,
+      "time": 1306886400000
+    },
+    {
+      "java": 9182,
+      "javascript": 7701,
+      "time": 1304208000000
+    },
+    {
+      "java": 8428,
+      "javascript": 7326,
+      "time": 1301616000000
+    },
+    {
+      "java": 9101,
+      "javascript": 7131,
+      "time": 1298937600000
+    },
+    {
+      "java": 7317,
+      "javascript": 5881,
+      "time": 1296518400000
+    },
+    {
+      "java": 6921,
+      "javascript": 5659,
+      "time": 1293840000000
+    },
+    {
+      "java": 6042,
+      "javascript": 5200,
+      "time": 1291161600000
+    },
+    {
+      "java": 5783,
+      "javascript": 4649,
+      "time": 1288569600000
+    },
+    {
+      "java": 5213,
+      "javascript": 4191,
+      "time": 1285891200000
+    },
+    {
+      "java": 4862,
+      "javascript": 4102,
+      "time": 1283299200000
+    },
+    {
+      "java": 4880,
+      "javascript": 4081,
+      "time": 1280620800000
+    },
+    {
+      "java": 4667,
+      "javascript": 3925,
+      "time": 1277942400000
+    },
+    {
+      "java": 4414,
+      "javascript": 3524,
+      "time": 1275350400000
+    },
+    {
+      "java": 4253,
+      "javascript": 3255,
+      "time": 1272672000000
+    },
+    {
+      "java": 3978,
+      "javascript": 3043,
+      "time": 1270080000000
+    },
+    {
+      "java": 4555,
+      "javascript": 3012,
+      "time": 1267401600000
+    },
+    {
+      "java": 3670,
+      "javascript": 2663,
+      "time": 1264982400000
+    },
+    {
+      "java": 3817,
+      "javascript": 2637,
+      "time": 1262304000000
+    },
+    {
+      "java": 2747,
+      "javascript": 2310,
+      "time": 1259625600000
+    },
+    {
+      "java": 2819,
+      "javascript": 2239,
+      "time": 1257033600000
+    },
+    {
+      "java": 2551,
+      "javascript": 2046,
+      "time": 1254355200000
+    },
+    {
+      "java": 2310,
+      "javascript": 1751,
+      "time": 1251763200000
+    },
+    {
+      "java": 2247,
+      "javascript": 1865,
+      "time": 1249084800000
+    },
+    {
+      "java": 2346,
+      "javascript": 1772,
+      "time": 1246406400000
+    },
+    {
+      "java": 2148,
+      "javascript": 1565,
+      "time": 1243814400000
+    },
+    {
+      "java": 1860,
+      "javascript": 1448,
+      "time": 1241136000000
+    },
+    {
+      "java": 1580,
+      "javascript": 1057,
+      "time": 1238544000000
+    },
+    {
+      "java": 1472,
+      "javascript": 1020,
+      "time": 1235865600000
+    },
+    {
+      "java": 1255,
+      "javascript": 955,
+      "time": 1233446400000
+    },
+    {
+      "java": 1194,
+      "javascript": 794,
+      "time": 1230768000000
+    },
+    {
+      "java": 862,
+      "javascript": 638,
+      "time": 1228089600000
+    },
+    {
+      "java": 991,
+      "javascript": 580,
+      "time": 1225497600000
+    },
+    {
+      "java": 1191,
+      "javascript": 729,
+      "time": 1222819200000
+    },
+    {
+      "java": 1210,
+      "javascript": 650,
+      "time": 1220227200000
+    },
+    {
+      "java": 245,
+      "javascript": 164,
+      "time": 1217548800000
+    }
+  ]
+}

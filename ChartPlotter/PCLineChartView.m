@@ -49,7 +49,6 @@
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
-    NSLog(@"Initializing frame");
 	if (self) {
 		[self setBackgroundColor:[UIColor clearColor]];
 		_interval = 20;
@@ -92,8 +91,6 @@
 	}
 	n_div = (scale_max-scale_min)/self.interval + 1;
 	div_height = (self.frame.size.height-top_margin-bottom_margin-x_label_height)/(n_div-1);
-
-    NSLog(@"%f %f %d", scale_max, scale_min, n_div);
 
 	for (int i=0; i<n_div; i++) {
 		float y_axis = scale_max - i*self.interval;
