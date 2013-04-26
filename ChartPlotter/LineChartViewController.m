@@ -57,9 +57,9 @@
 		_lineChartView.minValue = 100;
 		_lineChartView.maxValue = 12000;
 		[self.view addSubview:_lineChartView];
-		
-		NSString *sampleFile = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"so_data.json"];
-        NSData *myData = [NSData dataWithContentsOfFile:sampleFile];
+        
+        NSURL * url = [NSURL URLWithString:@"http://drtom.ch/posts/2012/06/19/Visualizing_Programming_Language_Popularity_with_D3/so_data.json"];
+        NSData *myData = [NSData dataWithContentsOfURL:url];
         NSError* error = nil;
         NSDictionary *sampleInfo = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:myData
                                                                                    options:kNilOptions
