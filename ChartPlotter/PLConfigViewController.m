@@ -7,6 +7,7 @@
 //
 
 #import "PLConfigViewController.h"
+#import "PLReadings.h"
 
 @interface PLConfigViewController ()
 
@@ -39,6 +40,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	[theTextField resignFirstResponder];
 	if(theTextField == self.deviceID) {
+        // Set the device ID
+        [[PLReadings sharedInstance] setDeviceID:[theTextField text]];
         return YES;
     }
 	return YES;
