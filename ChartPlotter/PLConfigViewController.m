@@ -36,7 +36,6 @@
 }
 
 // UITextFieldDelegate
-
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	[theTextField resignFirstResponder];
 	if(theTextField == self.deviceID) {
