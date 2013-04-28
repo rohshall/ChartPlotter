@@ -40,7 +40,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	[theTextField resignFirstResponder];
 	if(theTextField == self.deviceID) {
-        // Set the device ID
+        // Change both the settings and the model object
+        [[NSUserDefaults standardUserDefaults] setObject:[theTextField text] forKey:@"deviceID"];
         [[PLReadings sharedInstance] setDeviceID:[theTextField text]];
         return YES;
     }

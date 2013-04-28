@@ -23,7 +23,8 @@
 -(id)init
 {
     if (self = [super init]) {
-        _deviceID = @""; // 2012/06/19
+        //_deviceID = @"2012/06/19"
+        _deviceID = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"deviceID"];
     }
     return self;
 }
