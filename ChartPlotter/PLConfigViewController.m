@@ -40,6 +40,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	[theTextField resignFirstResponder];
 	if(theTextField == self.deviceID) {
+        [self.delegate didRetrieveDeviceID:theTextField.text];
         return YES;
     }
 	return YES;

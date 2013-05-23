@@ -50,50 +50,50 @@
 	if (self)
 	{
 		[self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
-		[self setTitle:@"Java vs Javascript"];
+		[self setTitle:@"Readings"];
 		
 		_lineChartView = [[PCLineChartView alloc] initWithFrame:CGRectMake(10,10,[self.view bounds].size.width-20,[self.view bounds].size.height-20)];
 		[_lineChartView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-		_lineChartView.minValue = 100;
-		_lineChartView.maxValue = 12000;
+		_lineChartView.minValue = 50;
+		_lineChartView.maxValue = 500;
 		[self.view addSubview:_lineChartView];
         
-        NSURL * url = [NSURL URLWithString:@"http://drtom.ch/posts/2012/06/19/Visualizing_Programming_Language_Popularity_with_D3/so_data.json"];
-        NSData *myData = [NSData dataWithContentsOfURL:url];
-        NSError* error = nil;
-        NSDictionary *sampleInfo = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:myData
-                                                                                   options:kNilOptions
-                                                                                     error:&error];
-        
-        PCLineChartViewComponent *javaComponent = [[PCLineChartViewComponent alloc] init];
-        [javaComponent setTitle:@"Java"];
-        [javaComponent setColour:PCColorOrange];
-        [javaComponent setShouldLabelValues:NO];
-
-        PCLineChartViewComponent *javascriptComponent = [[PCLineChartViewComponent alloc] init];
-        [javascriptComponent setTitle:@"Javascript"];
-        [javascriptComponent setColour:PCColorBlue];
-        [javascriptComponent setShouldLabelValues:NO];
-
-        NSMutableArray *xLabels = [NSMutableArray array];
-        NSMutableArray *javaPoints = [NSMutableArray array];
-        NSMutableArray *javascriptPoints = [NSMutableArray array];
-        
-		for (NSDictionary *point in [sampleInfo objectForKey:@"data"])
-		{
-            [javaPoints addObject:[point objectForKey:@"java"]];
-            [javascriptPoints addObject:[point objectForKey:@"javascript"]];
-			[xLabels addObject:[point objectForKey:@"time"]];
-		}
-        [javaComponent setPoints:javaPoints];
-        [javascriptComponent setPoints:javascriptPoints];
-        NSMutableArray *components = [NSMutableArray arrayWithObjects:javaComponent, javascriptComponent, nil];
-		[_lineChartView setComponents:components];
-		[_lineChartView setXLabels:xLabels];
+        PLConfigViewController * configViewController = [[PLConfigViewController alloc] initWithNibName:@"PLConfigViewController" bundle:nil];
+        configViewController.delegate = self;        
 	}
 	return self;
 }
 
+- (void)didRetrieveDeviceID:(NSString *)deviceID
+{
+    NSMutableString* urlString = [NSMutableString stringWithString: @"http://jreadings-polyglot.rhcloud.com/api/1/devices/"];
+    [urlString appendString:deviceID];
+    [urlString appendString:@"/readings"];
+    NSURL* url = [NSURL URLWithString:urlString];
+    NSData *myData = [NSData dataWithContentsOfURL:url];
+    NSError* error = nil;
+    NSArray *readings = (NSArray *)[NSJSONSerialization JSONObjectWithData:myData
+                                                                               options:kNilOptions
+                                                                                 error:&error];
+    
+    PCLineChartViewComponent *readingComponent = [[PCLineChartViewComponent alloc] init];
+    [readingComponent setTitle:@"Readings"];
+    [readingComponent setColour:PCColorOrange];
+    [readingComponent setShouldLabelValues:NO];
+    
+    NSMutableArray *xLabels = [NSMutableArray array];
+    NSMutableArray *readingPoints = [NSMutableArray array];
+    
+    for (NSDictionary *reading in readings)
+    {
+        [readingPoints addObject:[reading objectForKey:@"value"]];
+        [xLabels addObject:[reading objectForKey:@"created_at"]];
+    }
+    [readingComponent setPoints:readingPoints];
+    NSMutableArray *components = [NSMutableArray arrayWithObjects:readingComponent, nil];
+    [_lineChartView setComponents:components];
+    [_lineChartView setXLabels:xLabels];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
