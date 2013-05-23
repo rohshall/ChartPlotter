@@ -32,6 +32,7 @@
  */
 
 #import "LineChartViewController.h"
+#import "PLReadings.h"
 
 @implementation LineChartViewController
 
@@ -58,41 +59,26 @@
 		_lineChartView.maxValue = 500;
 		[self.view addSubview:_lineChartView];
         
-        PLConfigViewController * configViewController = [[PLConfigViewController alloc] initWithNibName:@"PLConfigViewController" bundle:nil];
-        configViewController.delegate = self;        
+        PCLineChartViewComponent *readingComponent = [[PCLineChartViewComponent alloc] init];
+        [readingComponent setTitle:@"Readings"];
+        [readingComponent setColour:PCColorOrange];
+        [readingComponent setShouldLabelValues:NO];
+        
+        NSMutableArray *xLabels = [NSMutableArray array];
+        NSMutableArray *readingPoints = [NSMutableArray array];
+        
+        NSArray *readings = [[PLReadings sharedInstance] readings];
+		for (NSDictionary *point in readings)
+		{
+            [readingPoints addObject:[point objectForKey:@"value"]];
+			[xLabels addObject:[point objectForKey:@"created_at"]];
+		}
+        [readingComponent setPoints:readingPoints];
+        NSMutableArray *components = [NSMutableArray arrayWithObjects:readingComponent, nil];
+		[_lineChartView setComponents:components];
+		[_lineChartView setXLabels:xLabels];
 	}
 	return self;
-}
-
-- (void)didRetrieveDeviceID:(NSString *)deviceID
-{
-    NSMutableString* urlString = [NSMutableString stringWithString: @"http://jreadings-polyglot.rhcloud.com/api/1/devices/"];
-    [urlString appendString:deviceID];
-    [urlString appendString:@"/readings"];
-    NSURL* url = [NSURL URLWithString:urlString];
-    NSData *myData = [NSData dataWithContentsOfURL:url];
-    NSError* error = nil;
-    NSArray *readings = (NSArray *)[NSJSONSerialization JSONObjectWithData:myData
-                                                                               options:kNilOptions
-                                                                                 error:&error];
-    
-    PCLineChartViewComponent *readingComponent = [[PCLineChartViewComponent alloc] init];
-    [readingComponent setTitle:@"Readings"];
-    [readingComponent setColour:PCColorOrange];
-    [readingComponent setShouldLabelValues:NO];
-    
-    NSMutableArray *xLabels = [NSMutableArray array];
-    NSMutableArray *readingPoints = [NSMutableArray array];
-    
-    for (NSDictionary *reading in readings)
-    {
-        [readingPoints addObject:[reading objectForKey:@"value"]];
-        [xLabels addObject:[reading objectForKey:@"created_at"]];
-    }
-    [readingComponent setPoints:readingPoints];
-    NSMutableArray *components = [NSMutableArray arrayWithObjects:readingComponent, nil];
-    [_lineChartView setComponents:components];
-    [_lineChartView setXLabels:xLabels];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

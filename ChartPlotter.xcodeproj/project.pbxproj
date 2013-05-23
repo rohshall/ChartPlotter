@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500D9B95172C1A1800F4C4E0 /* PLReadings.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D9B94172C1A1800F4C4E0 /* PLReadings.m */; };
 		50A675DD172914A100FE78FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DC172914A100FE78FE /* UIKit.framework */; };
 		50A675DF172914A100FE78FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675DE172914A100FE78FE /* Foundation.framework */; };
 		50A675E1172914A100FE78FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A675E0172914A100FE78FE /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500D9B93172C1A1800F4C4E0 /* PLReadings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLReadings.h; sourceTree = "<group>"; };
+		500D9B94172C1A1800F4C4E0 /* PLReadings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLReadings.m; sourceTree = "<group>"; };
 		50A675D9172914A100FE78FE /* ChartPlotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartPlotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A675DC172914A100FE78FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50A675DE172914A100FE78FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,6 +136,8 @@
 				50BB2D93172A5F2D00155CFA /* PLConfigViewController.h */,
 				50BB2D94172A5F2D00155CFA /* PLConfigViewController.m */,
 				50A675E3172914A100FE78FE /* Supporting Files */,
+				500D9B93172C1A1800F4C4E0 /* PLReadings.h */,
+				500D9B94172C1A1800F4C4E0 /* PLReadings.m */,
 			);
 			path = ChartPlotter;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				50A6761B17291B7700FE78FE /* LineChartViewController.m in Sources */,
 				50A6761C17291B7700FE78FE /* PCLineChartView.m in Sources */,
 				50BB2D95172A5F2D00155CFA /* PLConfigViewController.m in Sources */,
+				500D9B95172C1A1800F4C4E0 /* PLReadings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

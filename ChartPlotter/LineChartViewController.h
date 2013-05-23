@@ -35,6 +35,6 @@
 #import "PCLineChartView.h"
 #import "PLConfigViewController.h"
 
-@interface LineChartViewController : UIViewController <ConfigViewControllerDelegate>
+@interface LineChartViewController : UIViewController
 @property (nonatomic, strong) PCLineChartView *lineChartView;
 @end

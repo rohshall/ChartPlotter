@@ -7,6 +7,7 @@
 //
 
 #import "PLConfigViewController.h"
+#import "PLReadings.h"
 
 @interface PLConfigViewController ()
 
@@ -36,11 +37,12 @@
 }
 
 // UITextFieldDelegate
-
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 	[theTextField resignFirstResponder];
 	if(theTextField == self.deviceID) {
-        [self.delegate didRetrieveDeviceID:theTextField.text];
+        // Change both the settings and the model object
+        [[NSUserDefaults standardUserDefaults] setObject:[theTextField text] forKey:@"deviceID"];
+        [[PLReadings sharedInstance] setDeviceID:[theTextField text]];
         return YES;
     }
 	return YES;
