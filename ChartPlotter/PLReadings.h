@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface PLReadings : NSObject
-@property (strong, nonatomic) NSString *deviceID;
--(NSDictionary *)readings;
+@property (nonatomic, copy) NSString *deviceID;
+-(NSArray *)readings;
 
 + (PLReadings *) sharedInstance;
 @end

@@ -34,21 +34,21 @@
     // should never get called
 }
 
--(NSDictionary *)readings
+-(NSArray *)readings
 {
-    NSMutableString *deviceUrl = [NSMutableString stringWithString:@"http://drtom.ch/posts/"];
+    NSMutableString *deviceUrl = [NSMutableString stringWithString:@"http://jreadings-polyglot.rhcloud.com/api/1/devices/"];
     [deviceUrl appendString:_deviceID];
-    [deviceUrl appendString:@"/Visualizing_Programming_Language_Popularity_with_D3/so_data.json"];
+    [deviceUrl appendString:@"/readings"];
     NSURL * url = [NSURL URLWithString:deviceUrl];
     NSError* error = nil;
     NSData *myData = [NSData dataWithContentsOfURL:url
                       options:kNilOptions
                       error:&error];
     if (myData != nil) {
-        NSDictionary *sampleInfo = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:myData
+        NSArray *readings = (NSArray *)[NSJSONSerialization JSONObjectWithData:myData
                                                                                 options:kNilOptions
                                                                                 error:&error];
-        return sampleInfo;
+        return readings;
     }
     return nil;
 }

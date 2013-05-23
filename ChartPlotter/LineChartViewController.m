@@ -51,38 +51,30 @@
 	if (self)
 	{
 		[self.view setBackgroundColor:[UIColor colorWithWhite:1 alpha:1]];
-		[self setTitle:@"Java vs Javascript"];
+		[self setTitle:@"BMI Readings"];
 		
 		_lineChartView = [[PCLineChartView alloc] initWithFrame:CGRectMake(10,10,[self.view bounds].size.width-20,[self.view bounds].size.height-20)];
 		[_lineChartView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 		_lineChartView.minValue = 100;
-		_lineChartView.maxValue = 12000;
+		_lineChartView.maxValue = 600;
 		[self.view addSubview:_lineChartView];
         
-        PCLineChartViewComponent *javaComponent = [[PCLineChartViewComponent alloc] init];
-        [javaComponent setTitle:@"Java"];
-        [javaComponent setColour:PCColorOrange];
-        [javaComponent setShouldLabelValues:NO];
-
-        PCLineChartViewComponent *javascriptComponent = [[PCLineChartViewComponent alloc] init];
-        [javascriptComponent setTitle:@"Javascript"];
-        [javascriptComponent setColour:PCColorBlue];
-        [javascriptComponent setShouldLabelValues:NO];
+        PCLineChartViewComponent *component = [[PCLineChartViewComponent alloc] init];
+        [component setTitle:@"Readings"];
+        [component setColour:PCColorOrange];
+        [component setShouldLabelValues:NO];
 
         NSMutableArray *xLabels = [NSMutableArray array];
-        NSMutableArray *javaPoints = [NSMutableArray array];
-        NSMutableArray *javascriptPoints = [NSMutableArray array];
+        NSMutableArray *points = [NSMutableArray array];
         
-        NSDictionary *sampleInfo = [[PLReadings sharedInstance] readings];
-		for (NSDictionary *point in [sampleInfo objectForKey:@"data"])
+        NSArray *readings = [[PLReadings sharedInstance] readings];
+		for (NSDictionary *point in readings)
 		{
-            [javaPoints addObject:[point objectForKey:@"java"]];
-            [javascriptPoints addObject:[point objectForKey:@"javascript"]];
-			[xLabels addObject:[point objectForKey:@"time"]];
+            [points addObject:[point objectForKey:@"value"]];
+			[xLabels addObject:[point objectForKey:@"created_at"]];
 		}
-        [javaComponent setPoints:javaPoints];
-        [javascriptComponent setPoints:javascriptPoints];
-        NSMutableArray *components = [NSMutableArray arrayWithObjects:javaComponent, javascriptComponent, nil];
+        [component setPoints:points];
+        NSMutableArray *components = [NSMutableArray arrayWithObjects:component, nil];
 		[_lineChartView setComponents:components];
 		[_lineChartView setXLabels:xLabels];
 	}
